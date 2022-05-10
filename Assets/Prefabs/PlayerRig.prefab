@@ -109,7 +109,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -142,6 +142,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7366137751453459169}
     m_Modifications:
+    - target: {fileID: 4385829736187626602, guid: c463906449546d34baac4c8f9964ce19, type: 3}
+      propertyPath: _shooting.m_Id
+      value: 021420af-c61b-4243-8382-d06a01927e3f
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385829736187626602, guid: c463906449546d34baac4c8f9964ce19, type: 3}
+      propertyPath: _shooting.m_Name
+      value: Shooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385829736187626602, guid: c463906449546d34baac4c8f9964ce19, type: 3}
+      propertyPath: _shooting.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385829736187626602, guid: c463906449546d34baac4c8f9964ce19, type: 3}
+      propertyPath: _shooting.m_SingletonActionBindings.Array.data[0].m_Id
+      value: e9b905ea-311c-453c-a870-79137bf61891
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385829736187626602, guid: c463906449546d34baac4c8f9964ce19, type: 3}
+      propertyPath: _shooting.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Mouse>/leftButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385829736187626602, guid: c463906449546d34baac4c8f9964ce19, type: 3}
+      propertyPath: _shooting.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Shooting
+      objectReference: {fileID: 0}
     - target: {fileID: 6795333946130582686, guid: c463906449546d34baac4c8f9964ce19, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -192,122 +216,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c463906449546d34baac4c8f9964ce19, type: 3}
---- !u!1 &7366859279661052259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6798534899605732424, guid: c463906449546d34baac4c8f9964ce19, type: 3}
-  m_PrefabInstance: {fileID: 4063768602449595691}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7361283381597864373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6795333946130582686, guid: c463906449546d34baac4c8f9964ce19, type: 3}
   m_PrefabInstance: {fileID: 4063768602449595691}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7366137750939149516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7366859279661052259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 091b4278065eb8e469f61c5d5b12ad85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movement:
-    m_Name: Movement
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: ce23f37d-2a4c-4b5b-9c70-f402813d3ef8
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: 2f2b6075-56c5-4b08-b697-25bee9dcb7ac
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 4
-    - m_Name: up
-      m_Id: a000dfcf-0c3f-4272-81e6-878847844428
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 5c430e57-7c9c-43a9-9b7b-ede619167d1d
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 06df068c-cd47-4a54-91a0-7315a58eb9f0
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: right
-      m_Id: fe46dfa0-63ce-4fda-a3c2-0c79a65621aa
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: 2D Vector
-      m_Id: d5abd3de-df79-41d2-a8b5-24e3c6f64f1f
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 88138376-5581-4745-946a-381c18247a3c
-      m_Path: <Keyboard>/upArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: down
-      m_Id: a223f684-75f8-42da-be3d-45a8de1deccd
-      m_Path: <Keyboard>/downArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 07c81f0b-87ae-42e6-8334-b8ddd817bbd8
-      m_Path: <Keyboard>/leftArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 9707c1e3-e673-4f51-9960-f6a293b5475f
-      m_Path: <Keyboard>/rightArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    m_Flags: 0
-  _controlSpeed: 30
-  _xRange: 10
-  _yRange: 7
-  _rotationFactor: 1.5
-  _positionPitchFactor: -2
-  _inputPitchFactor: -15
-  _positionYawFactor: 2
-  _inputRollFactor: -20

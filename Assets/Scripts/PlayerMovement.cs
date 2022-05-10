@@ -22,15 +22,9 @@ namespace ArgonAssault
         float _verticalMovement;
 
         #region ENABLE/DISABLE
-        private void OnEnable()
-        {
-            _movement.Enable();
-        }
+        private void OnEnable() => _movement.Enable();
 
-        private void OnDisable()
-        {
-            _movement.Disable();
-        }
+        private void OnDisable() => _movement.Disable();
         #endregion
 
         private void Update()
