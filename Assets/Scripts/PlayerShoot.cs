@@ -35,10 +35,13 @@ namespace ArgonAssault
                 ActivateLasers(false);
         }
 
-        void ActivateLasers(bool isActive)
+        void ActivateLasers(bool isEnabled)
         {
             foreach (var laser in _lasers)
-                laser.SetActive(isActive);
+            {
+                var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+                emissionModule.enabled = isEnabled;
+            }
         }
     }
 }
