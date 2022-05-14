@@ -6,9 +6,15 @@ namespace ArgonAssault
 {
     public class Enemy : MonoBehaviour
     {
+        [SerializeField] GameObject _deathParticles;
+        [SerializeField] Transform _vfxParent;
+
         private void OnParticleCollision(GameObject other)
         {
-            Debug.Log($"{name}: I'm hit by {other.name}");
+            //pool this!
+            GameObject vfx = Instantiate(_deathParticles, transform.position, Quaternion.identity);
+            vfx.transform.parent = _vfxParent;
+
             Destroy(gameObject);
         }
     }
