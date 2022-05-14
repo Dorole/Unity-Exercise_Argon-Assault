@@ -8,6 +8,7 @@ namespace ArgonAssault
     public class CollisionHandler : MonoBehaviour
     {
         [SerializeField] float _delayBeforeRestart = 1f;
+        [SerializeField] ParticleSystem _explosionParticles;
 
         void OnTriggerEnter(Collider other)
         {
@@ -16,10 +17,17 @@ namespace ArgonAssault
 
         void StartCrashSequence()
         {
-            gameObject.GetComponent<PlayerMovement>().enabled = false;
-            gameObject.GetComponent<PlayerShoot>().enabled = false;
-
+            _explosionParticles.Play();
+            DisableComponents();
             StartCoroutine(CO_RestartLevel());
+        }
+
+        void DisableComponents()
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+            GetComponent<PlayerMovement>().enabled = false;
+            GetComponent<PlayerShoot>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
         }
 
         IEnumerator CO_RestartLevel()
@@ -29,6 +37,5 @@ namespace ArgonAssault
             yield return new WaitForSeconds(_delayBeforeRestart);
             SceneManager.LoadScene(currentSceneIndex);
         }
-
     }
 }
