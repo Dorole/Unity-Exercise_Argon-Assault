@@ -9,7 +9,7 @@ namespace ArgonAssault
     {
         [SerializeField] float _delayBeforeRestart = 1f;
         [SerializeField] ParticleSystem _explosionParticles;
-
+        
         void OnTriggerEnter(Collider other)
         {
             StartCrashSequence();
@@ -17,6 +17,7 @@ namespace ArgonAssault
 
         void StartCrashSequence()
         {
+            GetComponent<AudioSource>().Play();
             _explosionParticles.Play();
             DisableComponents();
             StartCoroutine(CO_RestartLevel());

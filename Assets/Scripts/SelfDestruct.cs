@@ -6,11 +6,11 @@ namespace ArgonAssault
 {
     public class SelfDestruct : MonoBehaviour
     {
-        [SerializeField] float __timeTillDestruction = 2f;
+        [SerializeField] float _timeTillDestruction = 2f;
 
         private void Start()
         {
-            Destroy(gameObject, __timeTillDestruction);
+            Destroy(gameObject, _timeTillDestruction);
         }
     }
 }
